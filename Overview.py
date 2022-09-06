@@ -9,7 +9,7 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(
-    page_title="CBSAs",
+    page_title="RJ App - Beta",
     page_icon="",
 )
 
