@@ -8,6 +8,12 @@ Created on Mon Sep  5 18:17:46 2022
 import pandas as pd
 import streamlit as st
 
+st.set_page_config(
+    page_title="CBSAs",
+    page_icon="",
+)
+
+
 file = pd.read_csv('cbsa.csv')
 
 states = file['state_id']
