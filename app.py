@@ -58,6 +58,8 @@ if city_button:
      df3 = file.loc[file['state_id'] == inputState,'city']
      df4 = file.loc[file['state_id'] == inputState,'zip']
      fdf = pd.concat([df3,df4],axis=1)
+     fdf['zip_count'] = fdf.groupby('city')['zip'].transform('count')
+     fdf = fdf.drop_duplicates()
      # fdf = fdf.drop_duplicates()
      st.write(fdf)
  
