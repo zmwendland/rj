@@ -62,7 +62,7 @@ if city_button:
      fdf = fdf.drop_duplicates(subset='city')
      fdf = fdf.drop(['zip'],axis=1)
      # fdf = fdf.drop_duplicates()
-     st.table(fdf)
+     st.dataframe(fdf)
  
 
     
