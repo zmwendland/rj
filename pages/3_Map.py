@@ -29,4 +29,5 @@ if submit_button:
     fdf = fdf.drop_duplicates()
     fdf = fdf.dropna()
     st.map(fdf)
+    st.dataframe(fdf)
 
