@@ -53,7 +53,7 @@ if cbsa_button:
 if cnty_button:
     df2 = file.loc[file['state_id'] == inputState,'county_name']
     df2 = df2.drop_duplicates()
-    st.table(df2)
+    st.dataframe(df2)
 if city_button:
      df3 = file.loc[file['state_id'] == inputState,'city']
      df4 = file.loc[file['state_id'] == inputState,'zip']
