@@ -45,15 +45,15 @@ if submit_button:
     df3 = file.loc[file['state_id'] == inputState,'city']
     df4 = file.loc[file['state_id'] == inputState,'zip']
     fdf = pd.concat([df,df2,df3,df4],axis=1)
-    st.table(fdf)
+    st.dataframe(fdf)
 if cbsa_button:
     df = sta_msa.loc[sta_msa['state_id']==inputState,'cbsa_name']
     df = df.drop_duplicates()
-    st.table(df)
+    st.dataframe(df)
 if cnty_button:
     df2 = file.loc[file['state_id'] == inputState,'county_name']
     df2 = df2.drop_duplicates()
-    st.table(df2)
+    st.dataframe(df2)
 if city_button:
      df3 = file.loc[file['state_id'] == inputState,'city']
      df4 = file.loc[file['state_id'] == inputState,'zip']
@@ -64,7 +64,7 @@ if city_button:
      pd.set_option('display.max_columns', None)
 
      # fdf = fdf.drop_duplicates()
-     st.table(fdf)
+     st.dataframe(fdf)
  
 
     
