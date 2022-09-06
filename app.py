@@ -34,7 +34,7 @@ print(df)
 
 inputForm = st.form("State Input")
 inputState = inputForm.text_input(label='Enter State',value='OH')
-inputState.upper()
+inputState = inputState.upper()
 submit_button = inputForm.form_submit_button("All Details")
 cbsa_button = inputForm.form_submit_button('CBSAs')
 cnty_button = inputForm.form_submit_button('Counties')
