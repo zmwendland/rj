@@ -30,7 +30,6 @@ state = 'OH'
 df = sta_msa.loc[sta_msa['state_id']==state,'cbsa_name']
 df = df.drop_duplicates()
 
-print(df)
 
 inputForm = st.form("State Input")
 inputState = inputForm.text_input(label='Enter State',value='OH')
