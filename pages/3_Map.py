@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 """
 Created on Tue Sep  6 07:11:00 2022
@@ -9,13 +8,18 @@ Created on Tue Sep  6 07:11:00 2022
 
 import pandas as pd
 import streamlit as st
-import streamlit.components.v1 as components
-
+ 
 df = pd.read_csv('map.csv')
+
+
 
 inputForm = st.form("State Input")
 inputState = inputForm.text_input(label='Enter State',value='OH')
 inputState = inputState.upper()
 submit_button = inputForm.form_submit_button("All Details")
+if submit_button:
+    df1 = df.loc[df['state_id']==inputState,'lat']
+    df2 = df.loc[df['state_id']==inputState,'lon']
+    fdf = pd.concat([df1,df2],axis=1)
+    st.map(fdf)
 
-st.map(df)
